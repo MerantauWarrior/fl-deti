@@ -20,7 +20,8 @@ a, input, button, textarea{
 }
 .container{
     position: relative;
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     z-index: 2;
 }
@@ -95,14 +96,15 @@ h2:after{
 }
 .header-info-item{
     width: 33.3333333%;
-    padding: 0 30px;
 }
 .header-info-item__sign{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     margin: 0 auto;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -110,8 +112,16 @@ h2:after{
     border: 2px solid #ef1700;
     background-color: transparent;
     font-family: "Roboto Slab", sans-serif;
-    font-size: 40px;
     color: #ef1700;
+}
+.header-info-item__sign-big{
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 0.8em;
+}
+.header-info-item__sign-small{
+    font-size: 12px;
 }
 .header-info-item__text{
     margin-top: 10px;
@@ -498,4 +508,68 @@ h2:after{
 }
 .footer-text p:last-child{
     margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .container{
+        padding: 0 15px;
+    }
+    .sponsons-carousel{
+        margin: 50px 15px;
+    }
+    .who__photo{
+        width: 48%;
+    }
+    .who__photo img{
+        margin-left: auto;
+    }
+    .contacts-form{
+        width: 50%;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px){
+    .container{
+        padding: 0 15px;
+    }
+    .header__logo{
+        width: 70%;
+    }
+    .sponsons-carousel{
+        margin: 50px 15px;
+    }
+    .who__items{
+        max-width: 100%;
+    }
+    .who__photo{
+        margin-top: 30px;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
+    h2{
+        font-size: 24px;
+    }
+    .header h3 {
+        font-size: 30px;
+    }
+    .header h4 {
+        font-size: 20px;
+    }
+    .header-info-item,
+    .interesting-item,
+    .what-happen-item,
+    .learn-item,
+    .buy-half,
+    .benefits-item,
+    .why-halh,
+    .who__items,
+    .interesting-item,
+    .contacts-form,
+    .about__video-wrapper{
+        width: 100%;
+    }
+    .header-info-item,
+    .interesting-item,
+    .learn-item{
+        margin-bottom: 20px;
+    }
 }
