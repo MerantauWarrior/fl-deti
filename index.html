@@ -21,12 +21,20 @@
     <h3>Знания - ценою в жизнь ребёнка!</h3>
     <h4>На курсе Первой помощи «Помощь детям»</h4>
     <p>вы научитесь не паниковать, быстро и правильно реагировать<br> при опасных состояниях ребёнка.</p>
-    <div><a href="#" class="btn-buy">хочу на курс</a></div>
+    <div><a href="#buyCourse" class="btn-buy js-scroll-to">хочу на курс</a></div>
     <div class="header__info">
-      <span>!</span>
-      <p>эффективная помощь при останивке дыхания - 5мин.<br>
-        среднее время прибытия Скорой помощи - 15-20 мин.<br>
-        кровопотеря опасная для жизни ребёнка - более 0,5 литра</p>
+      <div class="header-info-item">
+        <div class="header-info-item__sign">!</div>
+        <div class="header-info-item__text">эффективная помощь при остановке дыхания - 5мин.</div>
+      </div>
+      <div class="header-info-item">
+        <div class="header-info-item__sign">!</div>
+        <div class="header-info-item__text">среднее время прибытия Скорой помощи - 15-20 мин.</div>
+      </div>
+      <div class="header-info-item">
+        <div class="header-info-item__sign">!</div>
+        <div class="header-info-item__text">кровопотеря опасная для жизни ребёнка - более 0,5 литра</div>
+      </div>
     </div>
   </div>
 </header>
@@ -129,7 +137,7 @@
     </div>
   </div>
 </section>
-<section class="buy">
+<section class="buy" id="buyCourse">
   <div class="container">
     <h2>купить<br>ОНЛАЙН-КУРС ПЕРВОЙ ПОМОЩИ<br>
       «ПОМОЩЬ ДЕТЯМ»</h2>
@@ -231,12 +239,12 @@
           <div class="whu-item__arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
           <div class="whu-item__text">Не бояться сделать что-то не так, оказывая помощь</div>
         </div>
+      </div>
+      <div class="why-halh">
         <div class="whu-item">
           <div class="whu-item__arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
           <div class="whu-item__text">Не теряться при ЧС с детьми</div>
         </div>
-      </div>
-      <div class="why-halh">
         <div class="whu-item">
           <div class="whu-item__arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
           <div class="whu-item__text">Не совершать ошибок, оказывая Первую Помощь детям</div>
@@ -257,10 +265,6 @@
           <div class="whu-item__arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
           <div class="whu-item__text">Получить сертификат, подтверждающий знания ПП</div>
         </div>
-        <div class="whu-item">
-          <div class="whu-item__arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-          <div class="whu-item__text">Общаться в группе единомышленников</div>
-        </div>
       </div>
     </div>
   </div>
@@ -269,12 +273,6 @@
   <div class="container">
     <h2>МЫ ОБУЧАЛИ</h2>
     <div class="sponsons-carousel">
-      <div class="sponsons-carousel__item">
-        <img src="img/sponsors/1600px-Mes_logo.svg.png" alt="">
-      </div>
-      <div class="sponsons-carousel__item">
-        <img src="img/sponsors/22945bc2d0b4be35df1bd632a2425d22_small.png" alt="">
-      </div>
       <div class="sponsons-carousel__item">
         <img src="img/sponsors/1341914227_gazprom.png" alt="">
       </div>
@@ -288,22 +286,13 @@
         <img src="img/sponsors/dbd519913f085ef001aaf600f794902a.png" alt="">
       </div>
       <div class="sponsons-carousel__item">
-        <img src="img/sponsors/Huhtamaki_logo-600.png" alt="">
-      </div>
-      <div class="sponsons-carousel__item">
         <img src="img/sponsors/Hyundai-logo.png" alt="">
       </div>
       <div class="sponsons-carousel__item">
         <img src="img/sponsors/image.png" alt="">
       </div>
       <div class="sponsons-carousel__item">
-        <img src="img/sponsors/mt_logo.png" alt="">
-      </div>
-      <div class="sponsons-carousel__item">
         <img src="img/sponsors/noroot.png" alt="">
-      </div>
-      <div class="sponsons-carousel__item">
-        <img src="img/sponsors/promiks.png" alt="">
       </div>
       <div class="sponsons-carousel__item">
         <img src="img/sponsors/RyrXp.png" alt="">
@@ -322,8 +311,8 @@
         <div class="who-item">
           <div class="who-item__arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
           <div class="who-item__text">
-            <div class="who-item__title">Инструктор методист</div>
-            <div class="who-item__description">по обучению населения приёмам оказания Первой Помощи;</div>
+            <div class="who-item__title">Инструктор-методист</div>
+            <div class="who-item__description">с медицинским образованием по обучению населения приёмам оказания Первой Помощи;</div>
           </div>
         </div>
         <div class="who-item">
@@ -432,6 +421,10 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
+    $('.js-scroll-to').on('click', function (e) {
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: $('#buyCourse').offset().top }, 1000);
+    });
     $('.sponsons-carousel').slick({
       infinite: true,
       slidesToShow: 5,
