@@ -52,7 +52,7 @@ h2:after{
 .header{
     position: relative;
     padding: 50px 0;
-    background: url("img/header-bg-1.jpg") no-repeat center top;
+    background: url("img/header-background.jpg") no-repeat center top;
     -webkit-background-size: cover;
     background-size: cover;
     font-family: "Roboto Slab", sans-serif;
