@@ -12,6 +12,12 @@ html, body{
     background-color: #ff0202;
     color: #ffffff;
 }
+a{
+    text-decoration: none;
+}
+a, input, button, textarea{
+    outline: none;
+}
 .container{
     position: relative;
     width: 1200px;
@@ -35,17 +41,71 @@ h2{
 h2:after{
     content: '';
     position: absolute;
-    top: 120%;
+    bottom: -10px;
     left: 50%;
     width: 10%;
     margin-left: -5%;
     height: 1px;
     background-color: #ef1700;
 }
-/*about*/
+/*header*/
+.header{
+    position: relative;
+    padding: 50px 0;
+    background: url("img/benefits-bg.jpg") no-repeat center top;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-family: "Roboto Slab", sans-serif;
+    text-align: center;
+    color: #2f454f;
+}
+.header:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.84);
+}
+.header__logo{
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+.header h3{
+    font-size: 36px;
+}
+.header h4{
+    margin-bottom: 0;
+    font-size: 24px;
+}
+.header p{
+    margin: 0;
+    font-size: 19px;
+}
+.header .btn-buy{
+    margin: 30px 0;
+}
+.header__info{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+.header__info span{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 90px;
+    line-height: 0.8em;
+    color: #ef1700;
+}
+     /*about*/
+.about{
+    padding: 30px 0;
+}
 .about__video-wrapper{
     width: 50%;
-    margin: 70px auto;
+    margin: 50px auto 0 auto;
 }
 .about__video{
     position: relative;
@@ -61,11 +121,14 @@ h2:after{
     height: 100%;
 }
 /*interesting*/
+.interesting{
+    padding: 30px 0;
+}
 .interesting__items{
     display: flex;
     flex-wrap: wrap;
     width: 70%;
-    margin: 70px auto;
+    margin: 50px auto 0 auto;
 }
 .interesting-item{
     width: 33.3333333%;
@@ -90,12 +153,15 @@ h2:after{
     font-weight: 500;
 }
 /*what happens*/
+.what-happen{
+    padding-top: 30px;
+}
 .what-happen__items{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 70%;
-    margin: 70px auto;
+    margin: 50px auto 0 auto;
 }
 .what-happen-item{
     width: 33.3333333%;
@@ -115,11 +181,14 @@ h2:after{
     font-weight: 700;
 }
 /*learn*/
+.learn{
+    padding: 30px 0;
+}
 .learn__items{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    margin: 70px auto;
+    margin: 50px auto 0 auto;
 }
 .learn-item{
     width: 25%;
@@ -151,10 +220,52 @@ h2:after{
     font-size: 16px;
     font-weight: 500;
 }
+/*buy*/
+.buy{
+    padding: 30px 0;
+}
+.buy__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.buy-half{
+    width: 50%;
+}
+.buy-half p{
+    padding-right: 30px;
+    color: #2f454f;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 18px;
+    line-height: 1.2em;
+}
+.buy__price{
+    margin: 50px 0;
+    text-align: center;
+}
+.btn-buy{
+    display: inline-block;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #ef1700;
+}
+.buy__price p{
+    margin: 15px 0 0 0;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.buy__price .buy__red{
+    color: #ef1700;
+    font-size: 40px;
+}
 /*benefits*/
 .benefits{
     position: relative;
-    padding: 10px 0;
+    padding: 30px 0;
     background: url("img/benefits-bg.jpg") no-repeat center top;
     -webkit-background-size: cover;
     background-size: cover;
@@ -193,6 +304,9 @@ h2:after{
     font-weight: 500;
 }
 /*why*/
+.why{
+    padding: 30px 0;
+}
 .why__items{
     display: flex;
     flex-wrap: wrap;
@@ -207,6 +321,9 @@ h2:after{
     align-items: flex-start;
     margin-bottom: 20px;
 }
+.whu-item:last-child{
+    margin-bottom: 0;
+}
 .whu-item__arrow{
     margin-right: 6px;
     color: #e52326;
@@ -220,13 +337,14 @@ h2:after{
 }
 /*sponsors*/
 .sponsons{
-    padding: 50px 0;
+    padding: 30px 0;
     background-color: #f7f7f7;
 }
 .sponsons-carousel{
-    margin-top: 50px;
+    margin: 50px 0;
 }
 .sponsons-carousel__item img{
+    max-width: 80%;
     max-height: 80px;
     margin:auto;
 }
@@ -245,4 +363,106 @@ h2:after{
     opacity: .75;
     font-size: 46px;
     color: #232323;
+}
+/*who*/
+.who{
+    padding: 30px 0;
+}
+.who__inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.who__items{
+    max-width: 52%;
+}
+.who-item{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.who-item:last-child{
+    margin-bottom: 0;
+}
+.who-item__arrow{
+    margin-right: 6px;
+    font-size: 18px;
+    color: #e52326;
+}
+.who-item__title{
+    margin-bottom: 5px;
+    color: #273b44;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 0.9em;
+}
+.who-item__description{
+    color: #273b44;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+/*numbers*/
+.numbers{
+    padding: 30px 0;
+}
+/*contacts*/
+.contacts{
+    padding: 30px 0;
+    font-family: "Roboto Slab", sans-serif;
+}
+.contacts-form{
+    width: 30%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #273b44;
+}
+.contacts-form__field{
+    margin-bottom: 20px;
+}
+.inp-contacts,
+.inp-text{
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+}
+.inp-contacts{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+}
+.inp-text{
+    height: 160px;
+    padding: 10px 15px;
+    font-size: 18px;
+    resize: none;
+}
+.btn-submit{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    background-color: #ef1700;
+    cursor: pointer;
+}
+/*footer*/
+.footer{
+    padding: 30px 0;
+    background-color: #273b44;
+    border-top: 3px solid #ef1700;
+}
+.footer-text p{
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+}
+.footer-text p:last-child{
+    margin: 0;
 }
