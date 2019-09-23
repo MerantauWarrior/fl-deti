@@ -543,10 +543,19 @@ h2:after{
     .who__photo{
         margin-top: 30px;
     }
+    .interesting,
+    .numbers,
+    .sponsons,
+    .learn{
+        background-color: #e6e6e6;;
+    }
 }
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
     h2{
         font-size: 24px;
+    }
+    .contacts h2{
+        font-size: 18px;
     }
     .header h3 {
         font-size: 30px;
